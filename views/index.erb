@@ -1,0 +1,17 @@
+<html>
+<body>
+	<h1>Party Guests List!</h1>
+	<% if @people.length == 0 then %>
+	<strong>no one</strong> is going to the party.
+	<% elsif @people.length == 1 then %>
+	<strong>only one person</strong> is going to the party: <%= @people.first %>.
+	<% else %>
+	<strong><%= @people.length %> are going to the party!</strong>
+	<ul>
+		<% @people.each do |name| %>
+		<li><%= name %></li>
+		<% end %>
+	</ul>
+	<% end %>
+</body>
+</html>
